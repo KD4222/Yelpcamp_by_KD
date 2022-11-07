@@ -51,11 +51,12 @@ const store=MongoDBStore.create({
      console.log("session store error",e);
  });
 
+ const secret=process.env.SECRET||"ThisIsASecret";
  //SETTING UP SESSION
 const sessionConfig={
     store,
     name:'session',
-    secret:'ThisIsASecret',
+    secret:secret,
     resave:false,
     saveUninitialized:true,
     cookie:{
