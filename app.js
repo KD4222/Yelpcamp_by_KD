@@ -39,6 +39,7 @@ app.use(mongoSanitize({
 }));
 
 const dbUrl=process.env.DB_URL;
+// const dbUrl='mongodb://localhost:27017/yelpCamp';
 
 const store=MongoDBStore.create({
      mongoUrl:dbUrl,
